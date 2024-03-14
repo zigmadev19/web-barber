@@ -17,12 +17,12 @@ const testimonials = await getCollection('testimonials');
 			<div class="group hover:bg-black transition-all opacity-90 rounded border p-4 space-y-3 text-black">
 				<p class="font-bold text-lg opacity-90 group-hover:text-white">{t.data.quotes}</p>
 				<div class="flex items-center gap-3">
-					<div class="w-16 h-16">
-						<Image class="w-full h-full rounded-full object-cover" src={t.data.image} alt={t.data.name} />
+					<div class="w-10 aspect-square">
+						<Image class="w-full h-full rounded-full object-cover" src={t.data.image} alt={t.data.name} quality={100} />
 					</div>
 					<div class="group-hover:text-white">
-						<p class="text-lg opacity-80">{t.data.name}</p>
-						<p class="text-sm opacity-70">{t.data.work}</p>
+						<h3 class="text-lg opacity-80 mb-0 capitalize">{t.data.name}</h3>
+						<p class="text-sm leading-none opacity-70">{t.data.work}</p>
 					</div>
 				</div>
 			</div>
