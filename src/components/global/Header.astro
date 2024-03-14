@@ -3,13 +3,13 @@ import Container from "@components/Container.astro";
 import { Icon } from 'astro-icon/components';
 
 const menus = [
-{ text: "Home", url:"/"},
-{ text: "Tentang Kami", url:"/tentang"},
-{ text: "Kontak Kami", url:"/kontak"},
-{ text: "Faq", url:"/faq"},
+	{ text: "Home", url:"/"},
+	{ text: "Tentang Kami", url:"/tentang"},
+	{ text: "Kontak Kami", url:"/kontak"},
+	{ text: "Faq", url:"/faq"},
 ]
 ---
-<header x-data="{ open: false }" class="bg-stone-50 py-8 sticky top-0 z-[99] max-h-dvh">
+<header x-data="{ open: false }" class="bg-black text-white py-8 sticky top-0 z-[99] max-h-dvh">
 	<Container class="flex items-center justify-between">
 		<a class="text-2xl font-heading font-bold" href="/" data-astro-prefetch="tap"><i>Barber<span class="text-yellow-600 opacity-90">Shop</span></i></a>
 		<nav class="hidden lg:block text-md">
