@@ -1,0 +1,10 @@
+{
+  "name": "Your App Name",
+  "short_name": "App Name",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "description": "Your App Description",
+  "lang": "en"
+}

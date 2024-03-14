@@ -1,0 +1,27 @@
+---
+import Container from "@components/Container.astro";
+
+const lists = [
+{layanan: "potong dewasa", harga:"20"},
+{layanan: "potong anak anak", harga:"15"},
+{layanan: "potong kumis & jenggot", harga:"10"}
+]
+---
+
+<section class="py-24 bg-black opacity-90">
+	<Container class="space-y-16">
+		<div class="max-w-xl mx-auto text-white text-center space-y-4">
+			<h2 class="text-3xl font-heading tracking-wide opacity-90">List Harga <span class="text-yellow-600">Layanan</span></h2>
+			<p class="opacity-70 text-xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, maxime.</p>
+		</div>
+
+		<div class="max-w-2xl mx-auto space-y-4 rounded border px-4 py-8">
+		{ lists.map(l =>
+			<div class="flex items-center text-white opacity-90 justify-between">
+				<p class="text-lg lg:text-xl font-bold">{l.layanan}</p>
+				<p class="bg-yellow-600 px-3 py-1 text-white">{l.harga} K</p>
+			</div>
+		)}
+		</div>
+	</Container>
+</section>

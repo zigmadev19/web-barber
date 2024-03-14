@@ -1,0 +1,41 @@
+---
+import Header from "@components/global/Header.astro";
+import Footer from "@components/global/Footer.astro";
+
+import '@fontsource/oswald/500.css';
+import '@fontsource/oswald/700.css';
+
+import '@fontsource/source-sans-pro/600.css';
+---
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{ Astro.url.pathname.replace("/", "") } Barbershop</title>
+
+		<link rel="manifest" href="/manifest.json">
+
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+		<meta name="theme-color" media="(prefers-color-scheme: dark)"  content="black">
+
+		{/* seo */}
+		<meta name="title" content="barbershop web">
+		<meta name="description" content="website layanan seputar barber shop atau potong rambut">
+		<meta name="keywords" content="barber shop, potong rambut, warnai rambut, web site barber shop ,potong rambut anak, potong rambut dewasa">
+		<meta name="robots" content="index, follow">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+		<meta name="revisit-after" content="1 days">
+		<meta name="author" content="zigma dev">
+
+	</head>
+	<body id="top" x-data="{isVisible : false}" x-init="window.addEventListener('scroll', () => { isVisible = (window.scrollY > 10)})">
+		<Header />
+		<main class="min-h-dvh">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

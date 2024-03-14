@@ -1,0 +1,52 @@
+---
+import {Image} from "astro:assets";
+import { getCollection } from 'astro:content';
+import MainLayout from "@layouts/MainLayout.astro";
+import Container from "@components/Container.astro";
+import Barber from "@assets/barbre.jpg";
+const teams = await getCollection('teams');
+---
+<MainLayout>
+	<div class="bg-stone-50 py-16 border-b border-yellow-600 border-opacity-90">
+		<h1 class="text-center text-4xl uppercase tracking-wide font-heading font-bold text-[#333]">Profile Barber shop Kami</h1>
+	</div>
+	<section class="py-16">
+	<Container class="grid lg:grid-cols-2 gap-8">
+		<div class="space-y-6">
+			<h2 class="text-3xl text-[#333] font-heading capitalize">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ipsum?</h2>
+
+			<div class="text-[#555] text-lg space-y-2">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, minima sapiente officia nisi ipsa distinctio molestias. Quos, esse laborum inventore.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, rerum, illo, velit magni laudantium consequatur cupiditate repellendus nesciunt quos quis saepe mollitia aliquam amet placeat sit dicta atque. Odit, est impedit voluptate quod beatae repudiandae perspiciatis a exercitationem laudantium corporis.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, pariatur, est provident tempore fugiat tenetur culpa quisquam nesciunt sapiente omnis ipsam inventore id voluptatum eligendi eum iste impedit ratione expedita nulla rem unde consectetur incidunt quam debitis eveniet esse doloribus illum repellat nostrum nobis ullam minus sunt architecto. Nostrum, incidunt!</p>
+			</div>
+		</div>
+
+		<div>
+			<Image src={Barber} loading="edger" alt="tempat barber" />
+		</div>
+	</Container>
+</section>
+
+<section>
+	<Container class="space-y-8 py-24">
+		<h2 class="text-center font-heading uppercase font-bold text-3xl text-[#333]">Barber Team</h2>
+
+		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+		{teams.map( t =>
+			<div class="space-y-4">
+				<div class="aspect-square">
+					<Image class="w-full h-full object-cover" src={t.data.image} alt={t.data.name} />
+				</div>
+				<div class="text-center capitalize">
+					<h3 class="font-heading text-xl">{t.data.name}</h3>
+					<p>{t.data.position}</p>
+				</div>
+			</div>
+		)}
+		</div>
+	</Container>
+</section>
+</MainLayout>

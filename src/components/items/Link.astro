@@ -1,0 +1,18 @@
+---
+const { href } = Astro.props ;
+---
+
+<a
+  class="group relative inline-block overflow-hidden border border-l-0 border-yellow-600 px-8 py-3 focus:outline-none focus:ring"
+  href={href}
+>
+  <span
+    class="absolute inset-y-0 left-0 w-[1px] bg-yellow-600 transition-all group-hover:w-full group-active:bg-yellow-500"
+  ></span>
+
+  <span
+    class="relative text-xl font-medium text-yellow-600 transition-colors group-hover:text-white"
+  >
+    <slot />
+  </span>
+</a>
