@@ -8,14 +8,14 @@ const teams = await getCollection('teams');
 ---
 <MainLayout>
 	<div class="bg-stone-50 py-16 border-b border-yellow-600 border-opacity-90">
-		<h1 class="text-center text-4xl uppercase tracking-wide font-heading font-bold text-[#333]">Profile Barber shop Kami</h1>
+		<h1 class="text-center text-2xl lg:text-4xl uppercase tracking-wide font-heading font-bold text-[#333]">Profile Barber shop Kami</h1>
 	</div>
 	<section class="py-16">
 	<Container class="grid lg:grid-cols-2 gap-8">
 		<div class="space-y-6">
-			<h2 class="text-3xl text-[#333] font-heading capitalize">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ipsum?</h2>
+			<h2 class="text-xl lg:text-3xl text-[#333] font-heading capitalize">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, ipsum?</h2>
 
-			<div class="text-[#555] text-lg space-y-2">
+			<div class="text-[#555] text-md lg:text-lg space-y-2">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, minima sapiente officia nisi ipsa distinctio molestias. Quos, esse laborum inventore.</p>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, rerum, illo, velit magni laudantium consequatur cupiditate repellendus nesciunt quos quis saepe mollitia aliquam amet placeat sit dicta atque. Odit, est impedit voluptate quod beatae repudiandae perspiciatis a exercitationem laudantium corporis.</p>
@@ -32,7 +32,10 @@ const teams = await getCollection('teams');
 
 <section>
 	<Container class="space-y-8 py-24">
-		<h2 class="text-center font-heading uppercase font-bold text-3xl text-[#333]">Barber Team</h2>
+		<div class="text-center">
+			<h2 class="font-heading capitalize font-bold text-xl lg:text-3xl text-[#333]">Barber Team</h2>
+			<p class="text-md lg:text-lg text-[#555]">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+		</div>
 
 		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 		{teams.map( t =>
