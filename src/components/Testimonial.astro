@@ -17,7 +17,9 @@ const testimonials = await getCollection('testimonials');
 			<div class="group hover:bg-black transition-all opacity-90 rounded border p-4 space-y-3 text-black">
 				<p class="font-bold text-lg opacity-90 group-hover:text-white">{t.data.quotes}</p>
 				<div class="flex items-center gap-3">
-					<Image class="w-16 h-16 rounded-full object-cover" src={t.data.image} alt={t.data.name} />
+					<div class="w-16 h-16">
+						<Image class="w-full h-full rounded-full object-cover" src={t.data.image} alt={t.data.name} />
+					</div>
 					<div class="group-hover:text-white">
 						<p class="text-lg opacity-80">{t.data.name}</p>
 						<p class="text-sm opacity-70">{t.data.work}</p>
